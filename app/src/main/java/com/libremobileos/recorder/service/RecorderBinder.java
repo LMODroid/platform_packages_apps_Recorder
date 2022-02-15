@@ -13,8 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.libremobileos.recorder;
+package com.libremobileos.recorder.service;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.libremobileos.recorder";
+import android.os.Binder;
+
+import androidx.annotation.NonNull;
+
+public class RecorderBinder extends Binder {
+
+    @NonNull
+    private final SoundRecorderService mService;
+
+    public RecorderBinder(@NonNull SoundRecorderService service) {
+        super();
+        mService = service;
+    }
+
+    @NonNull
+    public SoundRecorderService getService() {
+        return mService;
+    }
 }

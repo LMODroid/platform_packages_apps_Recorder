@@ -13,8 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.libremobileos.recorder;
+package com.libremobileos.recorder.list;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.libremobileos.recorder";
+import androidx.annotation.IntDef;
+
+@IntDef(value = {
+        ListItemStatus.DEFAULT,
+        ListItemStatus.UNCHECKED,
+        ListItemStatus.CHECKED,
+})
+public @interface ListItemStatus {
+    int DEFAULT = 0;
+    int UNCHECKED = 1;
+    int CHECKED = 2;
 }

@@ -13,8 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.libremobileos.recorder;
+package com.libremobileos.recorder.task;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.libremobileos.recorder";
+import android.content.ContentResolver;
+import android.net.Uri;
+
+import androidx.annotation.NonNull;
+
+public final class DeleteRecordingTask implements Runnable {
+    @NonNull
+    private final ContentResolver cr;
+    @NonNull
+    private final Uri uri;
+
+    public DeleteRecordingTask(@NonNull ContentResolver cr, @NonNull Uri uri) {
+        this.cr = cr;
+        this.uri = uri;
+    }
+
+    @Override
+    public void run() {
+        cr.delete(uri, null, null);
+    }
 }

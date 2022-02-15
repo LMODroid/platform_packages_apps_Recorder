@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.libremobileos.recorder;
+package com.libremobileos.recorder.service;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.libremobileos.recorder";
+public interface IAudioVisualizer {
+
+    void setAmplitude(int amplitude);
 }

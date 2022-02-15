@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <org.lineageos.recorder.ui.WaveFormView
+    <com.libremobileos.recorder.ui.WaveFormView
         android:id="@+id/main_recording_visualizer"
         android:layout_width="0dp"
         android:layout_height="128dp"

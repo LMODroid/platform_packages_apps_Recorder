@@ -13,8 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.libremobileos.recorder;
+package com.libremobileos.recorder.service;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.libremobileos.recorder";
+import android.Manifest;
+
+import androidx.annotation.RequiresPermission;
+
+import java.io.File;
+import java.io.IOException;
+
+public interface SoundRecording {
+
+    @RequiresPermission(Manifest.permission.RECORD_AUDIO)
+    void startRecording(File file) throws IOException;
+
+    boolean stopRecording();
+
+    boolean pauseRecording();
+
+    boolean resumeRecording();
+
+    int getCurrentAmplitude();
+
+    String getMimeType();
+
+    String getFileExtension();
 }

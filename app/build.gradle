@@ -4,7 +4,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "org.lineageos.recorder"
+        applicationId "com.libremobileos.recorder"
         minSdkVersion 29
         targetSdkVersion 31
         versionCode 1
