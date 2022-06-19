@@ -37,4 +37,8 @@ android_app {
 
     sdk_version: "current",
 
+    aaptflags: [
+        "--rename-manifest-package",
+        "com.libremobileos.recorder",
+    ],
 }

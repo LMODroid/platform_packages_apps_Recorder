@@ -75,10 +75,10 @@
             android:foregroundServiceType="microphone"
             android:exported="false">
             <intent-filter>
-                <action android:name="org.lineageos.recorder.service.START" />
-                <action android:name="org.lineageos.recorder.service.STOP" />
-                <action android:name="org.lineageos.recorder.service.PAUSE" />
-                <action android:name="org.lineageos.recorder.service.RESUME" />
+                <action android:name="com.libremobileos.recorder.service.START" />
+                <action android:name="com.libremobileos.recorder.service.STOP" />
+                <action android:name="com.libremobileos.recorder.service.PAUSE" />
+                <action android:name="com.libremobileos.recorder.service.RESUME" />
             </intent-filter>
         </service>
     </application>

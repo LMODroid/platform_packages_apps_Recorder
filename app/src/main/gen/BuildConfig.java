@@ -16,5 +16,5 @@
 package org.lineageos.recorder;
 
 public final class BuildConfig {
-    public static final String APPLICATION_ID = "org.lineageos.recorder";
+    public static final String APPLICATION_ID = "com.libremobileos.recorder";
 }
