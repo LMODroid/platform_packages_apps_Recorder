@@ -35,6 +35,6 @@ public final class DeleteAllRecordingsTask implements Runnable {
 
     @Override
     public void run() {
-        uris.forEach(uri -> cr.delete(uri, null, null));
+        uris.forEach(uri -> new DeleteRecordingTask(cr, uri).run());
     }
 }
