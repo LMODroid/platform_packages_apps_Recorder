@@ -347,7 +347,9 @@ public class SoundRecorderService extends Service {
         mAmplitudeTimer.schedule(new TimerTask() {
             @Override
             public void run() {
-                notifyCurrentSoundAmplitude(mRecorder.getCurrentAmplitude());
+                if (mRecorder != null) {
+                    notifyCurrentSoundAmplitude(mRecorder.getCurrentAmplitude());
+                }
             }
         }, 0, 350);
     }
