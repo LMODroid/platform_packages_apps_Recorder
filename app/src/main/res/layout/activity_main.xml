@@ -59,7 +59,8 @@
         app:fabCustomSize="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="42dp" />
 
     <org.lineageos.recorder.ui.WaveFormView
         android:id="@+id/main_recording_visualizer"
