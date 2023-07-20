@@ -33,6 +33,7 @@
     <string name="record_again">重新录音</string>
     <string name="confirm_result_title">使用录音？</string>
     <string name="confirm_result_message">你想使用上次的录音吗？</string>
+    <string name="sound_splash_title">录音时请尊重旁人</string>
     <string name="sound_notification_title">录音机</string>
     <string name="sound_notification_message">音频长度：%1$s</string>
     <string name="sound_recording_title_working">正在录制</string>

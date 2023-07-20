@@ -55,6 +55,8 @@
     <string name="confirm_result_message">Do you want to use the last recording?</string>
 
     <!-- Sound recorder -->
+    <!-- Sound recorder splash title -->
+    <string name="sound_splash_title">Record respectfully around others</string>
     <!-- Sound recorder notification title -->
     <string name="sound_notification_title">Sound Recorder</string>
     <!-- Sound recorder notification message -->

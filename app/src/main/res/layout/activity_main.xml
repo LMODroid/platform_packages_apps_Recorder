@@ -28,11 +28,13 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="?android:attr/textColorPrimary"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/main_recording_visualizer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/main_sound_action" />
+        tools:text="@string/main_sound_action"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/main_elapsed_time"
@@ -103,4 +105,27 @@
         app:layout_constraintBottom_toBottomOf="@id/sound_fab"
         app:layout_constraintStart_toEndOf="@id/sound_fab"
         app:layout_constraintTop_toTopOf="@id/sound_fab" />
+
+    <ImageView
+        android:id="@+id/main_recording_splash_ic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/sound_splash_title"
+        android:src="@drawable/ic_graphic_eq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_recording_splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sound_splash_title"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_recording_splash_ic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

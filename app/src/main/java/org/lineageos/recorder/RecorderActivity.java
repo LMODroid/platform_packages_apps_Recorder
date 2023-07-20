@@ -71,9 +71,11 @@ public class RecorderActivity extends AppCompatActivity {
 
     private FloatingActionButton mSoundFab;
     private ImageView mPauseResume;
+    private ImageView mSplashEqualizerIcon;
 
     private TextView mRecordingText;
     private TextView mElapsedTimeText;
+    private TextView mSplashTitleText;
     private WaveFormView mRecordingVisualizer;
 
     private LocationHelper mLocationHelper;
@@ -154,11 +156,13 @@ public class RecorderActivity extends AppCompatActivity {
         ConstraintLayout mainView = findViewById(R.id.main_root);
         mSoundFab = findViewById(R.id.sound_fab);
         mPauseResume = findViewById(R.id.sound_pause_resume);
+        mSplashEqualizerIcon = findViewById(R.id.main_recording_splash_ic);
         ImageView soundList = findViewById(R.id.sound_list_icon);
         ImageView settings = findViewById(R.id.sound_settings);
 
         mRecordingText = findViewById(R.id.main_title);
         mElapsedTimeText = findViewById(R.id.main_elapsed_time);
+        mSplashTitleText = findViewById(R.id.main_recording_splash_title);
         mRecordingVisualizer = findViewById(R.id.main_recording_visualizer);
 
         mSoundFab.setOnClickListener(v -> toggleSoundRecorder());
@@ -280,17 +284,21 @@ public class RecorderActivity extends AppCompatActivity {
         mUiStatus = status;
 
         if (UiStatus.READY == status) {
-            mRecordingText.setText(getString(R.string.main_sound_action));
+            mRecordingText.setVisibility(View.GONE);
             mSoundFab.setImageResource(R.drawable.ic_action_record);
             mElapsedTimeText.setVisibility(View.GONE);
             mRecordingVisualizer.setVisibility(View.GONE);
             mPauseResume.setVisibility(View.GONE);
+            mSplashEqualizerIcon.setVisibility(View.VISIBLE);
+            mSplashTitleText.setVisibility(View.VISIBLE);
         } else {
             mSoundFab.setImageResource(R.drawable.ic_action_stop);
             mElapsedTimeText.setVisibility(View.VISIBLE);
             mRecordingVisualizer.setVisibility(View.VISIBLE);
             mRecordingVisualizer.setAmplitude(0);
             mPauseResume.setVisibility(View.VISIBLE);
+            mSplashEqualizerIcon.setVisibility(View.GONE);
+            mSplashTitleText.setVisibility(View.GONE);
             final Drawable prDrawable;
             if (UiStatus.PAUSED == status) {
                 mRecordingText.setText(getString(R.string.sound_recording_title_paused));
@@ -301,6 +309,7 @@ public class RecorderActivity extends AppCompatActivity {
                 mPauseResume.setContentDescription(getString(R.string.pause));
                 prDrawable = ContextCompat.getDrawable(this, R.drawable.avd_pause_to_play);
             }
+            mRecordingText.setVisibility(View.VISIBLE);
             mPauseResume.setTooltipText(mPauseResume.getContentDescription());
             mPauseResume.setImageDrawable(prDrawable);
             if (prDrawable instanceof AnimatedVectorDrawable) {
