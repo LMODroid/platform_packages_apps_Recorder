@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <resources>
+    <color name="colorBackground">#303030</color>
     <color name="colorPrimary">#121212</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#F2B077</color>
