@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2022 The LineageOS Project
+     SPDX-FileCopyrightText: 2025 The LibreMobileOS Foundation
      SPDX-License-Identifier: Apache-2.0
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
   <group>
     <clip-path
-        android:pathData="M0,0h108v108h-108z"/>
+        android:pathData="M0,0l108,0l0,108l-108,0z"/>
     <path
-        android:pathData="M68,54m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
-        android:fillColor="#F93B4F"/>
-    <path
-        android:pathData="M28.54,28.54m-72,0a72,72 0,1 1,144 0a72,72 0,1 1,-144 0"
-        android:fillAlpha="0.6">
-      <aapt:attr name="android:fillColor">
-        <gradient
-            android:gradientRadius="72"
-            android:centerX="28.54"
-            android:centerY="28.54"
-            android:type="radial">
-          <item android:offset="0" android:color="#19FFFFFF"/>
-          <item android:offset="1" android:color="#00FFFFFF"/>
-        </gradient>
-      </aapt:attr>
-    </path>
+        android:pathData="M70.75,54m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"
+        android:fillColor="#ed5f82"/>
   </group>
+  <path
+      android:pathData="M26,50.5L26,50.5A3.5,3.5 0,0 1,29.5 54L29.5,54A3.5,3.5 0,0 1,26 57.5L26,57.5A3.5,3.5 0,0 1,22.5 54L22.5,54A3.5,3.5 0,0 1,26 50.5z"
+      android:fillColor="#ffffff"/>
+  <path
+      android:pathData="M36.5,40L36.5,40A3.5,3.5 0,0 1,40 43.5L40,64.5A3.5,3.5 0,0 1,36.5 68L36.5,68A3.5,3.5 0,0 1,33 64.5L33,43.5A3.5,3.5 0,0 1,36.5 40z"
+      android:fillColor="#ffffff"/>
+  <path
+      android:pathData="M47,46L47,46A3.5,3.5 0,0 1,50.5 49.5L50.5,58.25A3.5,3.5 0,0 1,47 61.75L47,61.75A3.5,3.5 0,0 1,43.5 58.25L43.5,49.5A3.5,3.5 0,0 1,47 46z"
+      android:fillColor="#ffffff"/>
 </vector>
